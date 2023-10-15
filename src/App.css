@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;  
+}
+
+body{
+  background-image: url("./assets//wallpaper.jpeg");
+  min-height: 100vh;
+}
+
+.chessHeader{
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+
+}
+.chessHeader span{
+  color: cyan;
+  font-weight: bold;
+}
+
+.footer{
+  text-align: center;
+  
+}
+
+.paginationBtn{
+  background-color: white;
+  color: black;
+  background: none;
+  border: none;
+  font-size: 2rem;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageNum{
+  font-size: 1.5rem;
+}
