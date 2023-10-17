@@ -1,0 +1,68 @@
+/* Table Headers */
+.table thead tr th {
+    color: #333; /* Dark text color */
+    background: #fff; /* White background */
+    border: 1px solid #333; /* Dark border */
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+  }
+
+  .tableContainer{
+    width: 1100px;
+    text-align: center;
+  }
+  
+
+  .nameCol{
+    text-align: left;
+  }
+
+  /* Table Rows */
+  .table tbody tr {
+    color: #333; /* Dark text color */
+    background: #f2f2f2; /* Light gray background */
+    border: 1px solid #ccc; /* Light border */
+  }
+
+  .table tbody tr td{
+    color: white;
+    background: rgb(0, 0, 0, .8);
+  }
+  
+
+  .table tbody tr td .chessURL{
+    color: white;
+  }
+  .table tbody tr td .avatar{
+    width: 5rem;
+  }
+  
+  /* Chess URL Link */
+  .chessURL {
+    text-decoration: none;
+    color: #007bff; /* Chess-themed blue */
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .paginationRow button {
+    color: white;
+    background: #007bff; /* Chess-themed blue */
+    width: 5rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .paginationRow button:hover {
+    background: #0056b3; /* Darker blue on hover */
+  }
+  

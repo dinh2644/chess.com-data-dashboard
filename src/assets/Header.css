@@ -1,0 +1,15 @@
+.LiveBlitzRatingCSS{
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+  }
+  
+  .BlitzCSS{
+    color: cyan;
+  }
+  
+  .ChessImg{
+    width: 5rem;
+    float: left;
+    margin-right: 25px;
+  }

@@ -1,11 +1,18 @@
 import React from "react";
+import ChessImg from "../assets/chess.png";
+import "../assets/Header.css";
 
 const Header = () => {
   return (
     <>
-      <h1 className="chessHeader mb-5">
-        Live<span>Blitz</span>Rating
-      </h1>
+      <nav className="navbar mb-5">
+        <div className="container mt-2">
+          <img className="ChessImg" src={ChessImg} alt="" />
+          <h1 className="LiveBlitzRatingCSS">
+            Live<span className="BlitzCSS">Blitz</span>Rating 🔴
+          </h1>
+        </div>
+      </nav>
     </>
   );
 };

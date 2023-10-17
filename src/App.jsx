@@ -1,29 +1,34 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Leaderboard from "./components/Leaderboard";
-import Header from "./components/Header";
-const API_KEY = import.meta.env.VITE_APP_API_KEY;
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Table from "./components/Table";
+import Header from "./components/Header";
+import SidePanel from "./components/SidePanel";
 
 const App = () => {
-  const [leaderboardData, setLeaderboardData] = useState([]);
-
+  const [blitzData, setBlitzData] = useState([]);
   useEffect(() => {
-    const fetchData = async () => {
-      let response = await axios.get("https://api.chess.com/pub/leaderboards/");
-      const liveBlitzData = response.data["live_blitz"];
-      setLeaderboardData(liveBlitzData);
+    const fetchLeaderboard = async () => {
+      try {
+        let response = await axios.get(
+          "https://api.chess.com/pub/leaderboards"
+        );
+        const LeaderboardData = response.data;
+        const live_blitzData = LeaderboardData.live_blitz;
+        setBlitzData(live_blitzData);
+      } catch (err) {
+        console.error("Error fetching: ", err);
+      }
     };
-    fetchData();
-    console.log(leaderboardData);
+    fetchLeaderboard();
+    console.log(blitzData);
   }, []);
-
   return (
     <>
       <Header />
-      <Leaderboard leaderboardData={leaderboardData} />
-      <footer className="footer mt-5 mb-5">&#169;Chess.com</footer>
+      <Table blitzData={blitzData} />
+      <SidePanel blitzData={blitzData} />
     </>
   );
 };
