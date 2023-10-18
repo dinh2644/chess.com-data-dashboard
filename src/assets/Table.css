@@ -16,6 +16,7 @@
 
   .nameCol{
     text-align: left;
+    width: 25%;
   }
 
   /* Table Rows */
@@ -35,7 +36,7 @@
     color: white;
   }
   .table tbody tr td .avatar{
-    width: 5rem;
+    width: 3rem;
   }
   
   /* Chess URL Link */

@@ -3,7 +3,7 @@ import "../assets/Table.css";
 
 const Table = ({ blitzData }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5;
+  const itemsPerPage = 10;
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -27,7 +27,6 @@ const Table = ({ blitzData }) => {
                 <th>Country</th>
                 <th>Title</th>
                 <th>Win Count</th>
-                <th>Draw Count</th>
                 <th>Loss Count</th>
                 <th>Elo</th>
               </tr>
@@ -47,7 +46,6 @@ const Table = ({ blitzData }) => {
                   <td>{data.country.slice(-2)}</td>
                   <td>{data.title}</td>
                   <td>{String(data.win_count)}</td>
-                  <td>{String(data.draw_count)}</td>
                   <td>{String(data.loss_count)}</td>
                   <td>{String(data.score)}</td>
                 </tr>
@@ -56,7 +54,7 @@ const Table = ({ blitzData }) => {
           </table>
         </div>
 
-        <div className="row paginationRow mb-5">
+        <div className="row paginationRow">
           {/*Pagination*/}
           <div className="pagination">
             <button

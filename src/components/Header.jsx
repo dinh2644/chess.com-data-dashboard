@@ -9,7 +9,7 @@ const Header = () => {
         <div className="container mt-2">
           <img className="ChessImg" src={ChessImg} alt="" />
           <h1 className="LiveBlitzRatingCSS">
-            Live<span className="BlitzCSS">Blitz</span>Rating 🔴
+            Live<span className="BlitzCSS">Chess</span>Standings 🔴
           </h1>
         </div>
       </nav>

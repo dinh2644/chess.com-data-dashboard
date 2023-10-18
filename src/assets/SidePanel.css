@@ -1,9 +1,84 @@
-.card{
-    width: 17rem;
-    height: 12rem;
-    left: 50px;
-    top: -800px;
-    color: black;
-    background: white ;
+/* Custom CSS to style the side panel */
+.commonCountry-panel {
+    position: fixed;
+    top: 50px;
+    left: 25px;
+    width: 250px;
+    height: 17%;
+    background-color: #333;
+    color: #fff;
+    transition: left 0.4s;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.4);
+    
     text-align: center;
+}
+
+.card-header{
+    background: white;
+    color: black;
+}
+
+.avgElo-panel {
+    position: fixed;
+    top: 250px;
+    left: 25px;
+    width: 250px;
+    height: 17%;
+    background-color: #333;
+    color: #fff;
+    transition: left 0.3s;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.4);
+    
+    text-align: center;
+}
+.mostWins-panel {
+    position: fixed;
+    top: 475px;
+    left: 25px;
+    width: 250px;
+    height: 17%;
+    background-color: #333;
+    color: #fff;
+    transition: left 0.4s;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.4);
+    
+    text-align: center;
+}
+.mostLosses-panel {
+    position: fixed;
+    top: 700px;
+    left: 25px;
+    width: 250px;
+    height: 17%;
+    background-color: #333;
+    color: #fff;
+    transition: left 0.4s;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.4);
+    
+    text-align: center;
+}
+
+.commonCountry-panel h4{
+    font-size:1rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.avgElo-panel h4{
+    font-size:1rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.mostWins-panel h4{
+    font-size:1rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.mostLosses-panel h4{
+    font-size:1rem;
+    font-weight: 600;
+    margin-top: 10px;
 }

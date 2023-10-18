@@ -5,6 +5,9 @@
 html body{
   color: white;
   background-image: url("./assets/chess.com");
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
 }
 
 body .navbar .container{
