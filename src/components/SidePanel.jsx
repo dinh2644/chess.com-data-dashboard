@@ -8,7 +8,7 @@ const SidePanel = ({ blitzData }) => {
   const [mostLosses, setMostLosses] = useState([]);
 
   useEffect(() => {
-    //get common country
+    //get most frequent country
     const commonCountry = {};
     let maxElement = blitzData[0];
     let maxCount = 1;
