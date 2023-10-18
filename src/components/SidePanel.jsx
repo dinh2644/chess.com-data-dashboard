@@ -7,8 +7,6 @@ const SidePanel = ({ blitzData }) => {
   const [mostWins, setMostWins] = useState([]);
   const [mostLosses, setMostLosses] = useState([]);
 
-  const [name, setName] = useState("Bob");
-
   useEffect(() => {
     //get common country
     const commonCountry = {};

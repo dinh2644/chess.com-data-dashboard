@@ -67,3 +67,16 @@
     background: #0056b3; /* Darker blue on hover */
   }
   
+  .searchBar{
+    width: 75%;
+   padding: 0;
+  }
+  
+
+  .searchBar .form-input{
+    border-radius: 0;
+  }
+
+  .form-select{
+    width: 55%;
+  }
