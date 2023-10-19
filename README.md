@@ -30,10 +30,13 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+  <a href="https://www.loom.com/share/bd6c28ab1a1646a6b184c90b9d776b23">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/bd6c28ab1a1646a6b184c90b9d776b23-with-play.gif">
+  </a>
+
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+Video created with Loom
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -42,6 +45,8 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+This filtering part was the most difficult, especially with pagination. Getting the filters to work with the data on a certain page added more hours to this project than expected. 
 
 ## License
 
