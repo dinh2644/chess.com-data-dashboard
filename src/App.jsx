@@ -28,7 +28,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <Table blitzData={blitzData} filteredTable={filteredTable} />
+      <Table blitzData={blitzData} />
       <SidePanel blitzData={blitzData} />
     </>
   );

@@ -56,8 +56,8 @@ const Table = ({ blitzData }) => {
   return (
     <>
       <div className="container tableContainer">
-        <div className="row">
-          <div className="col">
+        <div className="row filterInput mb-2">
+          <div className="col-xl-8">
             {/* Searchbar */}
             <div className="form searchBar ">
               <i className="fa fa-search"></i>
@@ -69,7 +69,7 @@ const Table = ({ blitzData }) => {
               />
             </div>
           </div>
-          <div className="col">
+          <div className="col-xl-4 filterDropdowns">
             {/* Wins drop down */}
             <select
               className="form-select"
@@ -83,11 +83,9 @@ const Table = ({ blitzData }) => {
               <option value="5000-9999">5000-9999 wins</option>
               <option value="10000">10000+ wins</option>
             </select>
-          </div>
-          <div className="col">
             {/* Losses drop down */}
             <select
-              className="form-select"
+              className="form-select lossDropDown"
               aria-label="Default select example"
               onChange={(e) => setSelectedLossesRange(e.target.value)}
             >
@@ -99,10 +97,11 @@ const Table = ({ blitzData }) => {
               <option value="10000">10000+ losses</option>
             </select>
           </div>
+          <div className="col"></div>
         </div>
         <div className="row">
           <table className="table">
-            <thead style={{ color: "white" }}>
+            <thead>
               <tr>
                 <th>Rank</th>
                 <th>Name</th>
@@ -116,14 +115,12 @@ const Table = ({ blitzData }) => {
             <tbody>
               {filteredData.slice(startIndex, endIndex).map((data, index) => (
                 <tr key={index}>
-                  <td>
-                    <a className="chessURL" href={data.url}>
-                      {data.rank}
-                    </a>
-                  </td>
+                  <td className="rankCSS">{data.rank}</td>
                   <td className="nameCol">
-                    <img className="avatar" src={data.avatar} alt="" />
-                    {data.name}
+                    <a className="chessURL" href={data.url}>
+                      <img className="avatar" src={data.avatar} alt="" />
+                      {data.name}
+                    </a>
                   </td>
                   <td>{data.country.slice(-2)}</td>
                   <td>{data.title}</td>
@@ -142,6 +139,7 @@ const Table = ({ blitzData }) => {
             <button
               disabled={currentPage === 1}
               onClick={() => handlePageChange(currentPage - 1)}
+              className="mx-1"
             >
               Previous
             </button>
@@ -151,6 +149,7 @@ const Table = ({ blitzData }) => {
             <button
               disabled={currentPage === totalPages}
               onClick={() => handlePageChange(currentPage + 1)}
+              className="mx-1"
             >
               Next
             </button>
