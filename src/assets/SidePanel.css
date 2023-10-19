@@ -1,77 +1,76 @@
-/* Custom CSS to style the side panel */
 .commonCountry-panel {
-    position: fixed;
-    top: 50px;
-    left: 25px;
-    width: 256px;
-    height: 17%;
-    background-color: white;
-    color: #333;
-    transition: left 0.3s;
-    overflow-y: auto;
-    border-radius: 20px;
-    text-align: center;
-    padding: 20px;
+  position: fixed;
+  top: 50px;
+  left: 25px;
+  width: 256px;
+  height: 17%;
+  background-color: white;
+  color: #333;
+  transition: left 0.3s;
+  overflow-y: auto;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .avgElo-panel {
-    position: fixed;
-    top: 250px;
-    left: 25px;
-    width: 256px;
-    height: 17%;
-    background-color: white;
-    color: #333;
-    transition: left 0.3s;
-    overflow-y: auto;
-    border-radius: 20px;
-    text-align: center;
-    padding: 20px;
+  position: fixed;
+  top: 250px;
+  left: 25px;
+  width: 256px;
+  height: 17%;
+  background-color: white;
+  color: #333;
+  transition: left 0.3s;
+  overflow-y: auto;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
 }
 .mostWins-panel {
-    position: fixed;
-    top: 475px;
-    left: 25px;
-    width: 256px;
-    height: 17%;
-    background-color: white;
-    color: #333;
-    transition: left 0.3s;
-    overflow-y: auto;
-    border-radius: 20px;
-    text-align: center;
-    padding: 20px;
+  position: fixed;
+  top: 475px;
+  left: 25px;
+  width: 256px;
+  height: 17%;
+  background-color: white;
+  color: #333;
+  transition: left 0.3s;
+  overflow-y: auto;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
 }
 .mostLosses-panel {
-    position: fixed;
-    top: 700px;
-    left: 25px;
-    width: 256px;
-    height: 17%;
-    background-color: white;
-    color: #333;
-    transition: left 0.3s;
-    overflow-y: auto;
-    border-radius: 20px;
-    text-align: center;
-    padding: 20px;
+  position: fixed;
+  top: 700px;
+  left: 25px;
+  width: 256px;
+  height: 17%;
+  background-color: white;
+  color: #333;
+  transition: left 0.3s;
+  overflow-y: auto;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
-.card-header{
-    background: white;
-    color: black;
+.card-header {
+  background: white;
+  color: black;
 }
 
 .commonCountry-panel h4,
 .avgElo-panel h4,
 .mostWins-panel h4,
 .mostLosses-panel h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
-.card{
-    background: none;
-    border: none;
+.card {
+  background: none;
+  border: none;
 }

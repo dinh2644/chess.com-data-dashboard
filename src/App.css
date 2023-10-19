@@ -1,15 +1,14 @@
-*{
-  font-family:'Fira Sans', sans-serif;
+* {
+  font-family: "Fira Sans", sans-serif;
 }
 
-html body{
+html body {
   color: white;
   background-image: url("./assets/chesscom.png");
+  height: 100v;
 }
 
-body .navbar .container{
-display: flex;
-justify-content: center;
-} 
-
-  
+body .navbar .container {
+  display: flex;
+  justify-content: center;
+}

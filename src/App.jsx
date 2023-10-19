@@ -7,7 +7,6 @@ import Header from "./components/Header";
 import SidePanel from "./components/SidePanel";
 const App = () => {
   const [blitzData, setBlitzData] = useState([]);
-  const [filteredTable, setFilteredTable] = useState([]);
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
@@ -17,13 +16,11 @@ const App = () => {
         const LeaderboardData = response.data;
         const live_blitzData = LeaderboardData.live_blitz;
         setBlitzData(live_blitzData);
-        setFilteredTable(live_blitzData);
       } catch (err) {
         console.error("Error fetching: ", err);
       }
     };
     fetchLeaderboard();
-    console.log(blitzData);
   }, []);
   return (
     <>

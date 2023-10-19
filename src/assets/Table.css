@@ -1,59 +1,53 @@
-
-
 .table thead tr th {
-    background: #fff;
-    border: 1px solid #727272;   
-  }
+  background: #fff;
+  border: 2px solid black;
+}
 
-  .tableContainer{
-    width: 1200px;
-    text-align: center;
-  }
-  
+.tableContainer {
+  width: 1200px;
+  text-align: center;
+}
 
-  .nameCol{
-    text-align: left;
-    width: 28%;
-    font-size: 1.1rem;
-  }
+.nameCol {
+  text-align: left;
+  width: 28%;
+  font-size: 1.1rem;
+}
 
- 
-  .table tbody tr {
-    color: #333;
-    background: #f2f2f2;
-    border: 1px solid #ccc; 
-  }
+.table tbody tr {
+  color: #333;
+  background: #f2f2f2;
+  border: 2px solid black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
-  .table tbody tr td{
-    color: white;
-    background: rgb(0, 0, 0, .8);
-   
-  }
-  
+.table tbody tr td {
+  color: white;
+  background: rgb(0, 0, 0, 0.8);
+  border: 1px solid black;
+}
 
-  .table tbody tr td .chessURL{
-    color: white;
-  }
-  .table tbody tr td .avatar{
-    width: 3rem;
-  }
-  
+.table tbody tr td .chessURL {
+  color: white;
+}
+.table tbody tr td .avatar {
+  width: 3rem;
+}
 
-  .chessURL {
-    color: white; 
-    text-decoration: none; 
-    cursor: pointer; 
-    transition: color 0.3s !important; 
-  }
-  
-  .chessURL:hover {
-    text-decoration: underline;
-  }
-  
+.chessURL {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s !important;
+}
 
-  .paginationRow {
+.chessURL:hover {
+  text-decoration: underline;
+}
+
+.paginationRow {
   position: relative;
-  min-height: 50px; 
+  min-height: 50px;
 }
 
 .pagination {
@@ -62,12 +56,12 @@
   align-items: center;
   position: absolute;
   bottom: 0;
-  left: 50%; 
+  left: 50%;
   transform: translateX(-50%);
 }
 
 .pagination button {
-  color: black; 
+  color: black;
   background: white;
   width: 6rem;
   height: 3rem;
@@ -76,22 +70,21 @@
 }
 
 .pagination button:hover {
-  background: green; 
-  color: white; 
+  background: green;
+  color: white;
 }
-  
-  .searchBar {
-    width: 50%;
-    padding: 0;
-    background: rgba(0, 0, 0, 0.3); 
-    border: none;
-    margin-left: -11px;
+
+.searchBar {
+  width: 50%;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  margin-left: -11px;
 }
-  
 
 .searchBar .form-input {
   border: none;
-  background: white; 
+  background: white;
   color: black;
   padding: 10px;
   width: 100%;
@@ -102,40 +95,39 @@
   color: black;
 }
 
-  .form-select {
-    width: 55%;
-    border: none;
-    color: black;
-    padding: 10px;
-    transition: border-color 0.3s, background 0.3s;
-    position: relative;
-    border-radius: 0;
+.form-select {
+  width: 55%;
+  border: none;
+  color: black;
+  padding: 10px;
+  transition: border-color 0.3s, background 0.3s;
+  position: relative;
+  border-radius: 0;
 }
 
-.filterDropdowns{
+.filterDropdowns {
   display: flex;
- 
 }
 
-.lossDropDown{
+.lossDropDown {
   left: 11px;
 }
 
-.rankCSS{
-  text-align:center;
-  width: 50px !important;
+.rankCSS {
+  vertical-align: middle;
+  width: 50px;
 }
 
-.playerLink{
+.playerLink {
   color: #007bff;
   text-decoration: none;
   cursor: pointer;
 }
 .playerLink:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
-.avatar{
+.avatar {
   margin-right: 5px;
   width: 3rem !important;
 }

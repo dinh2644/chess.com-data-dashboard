@@ -1,51 +1,49 @@
-.LiveBlitzRatingCSS{
-    color: white;
-    font-size: 4rem;
-    font-weight: 800;
-    
-  }
-  
-  .BlitzCSS{
-    color: greenyellow;
-  }
-  
-  .ChessImg{
-    width: 5rem;
-    float: left;
-    margin-right: 25px;
-  }
+.LiveBlitzRatingCSS {
+  color: white;
+  font-size: 4.5rem;
+  font-family: "Impact", sans-serif;
+}
 
-  @keyframes glow {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* Apply the animation to the red dot emoji */
-  .LiveBlitzRatingCSS::after {
-    content: '🔴'; /* Red dot emoji */
-    display: inline-block;
-    animation: glow 1s infinite; /* 1s duration and infinite looping */
-    color: #ff0000; /* Red color */
-  }
+.BlitzCSS {
+  color: red;
+  font-family: "Impact", sans-serif;
+}
 
-  .chessDOTcom{
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    margin-top: -25px;
-    margin-bottom: 5px;
-    color: whitesmoke;
+.ChessImg {
+  width: 5rem;
+  float: left;
+  margin-right: 25px;
+}
 
+@keyframes glow {
+  0% {
+    opacity: 1;
   }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-  .chessDOTcom a{
-    text-decoration:none;
-    color: palevioletred;
-  }
+.LiveBlitzRatingCSS::after {
+  content: "🔴";
+  display: inline-block;
+  animation: glow 1s infinite;
+  color: #ff0000;
+}
+
+.chessDOTcom {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-top: -25px;
+  margin-bottom: 5px;
+  color: whitesmoke;
+}
+
+.chessDOTcom a {
+  text-decoration: none;
+  color: palevioletred;
+}
