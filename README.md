@@ -1,31 +1,30 @@
-# Web Development Project 5 - *Name of App Here*
+# Web Development Project 5 - Chess.com Blitz Data Dashbaord
 
-Submitted by: **Your Name Here**
+Submitted by: Tu Dinh
+This web app: Displays the top 50 blitz player on Chess.com. Blitz is a chess game with a time control of 5 minutes or less with no time increment. Additional information are displayed via the side cards. Filters included are a search bar and drop downs.
 
-This web app: **insert description**
-
-Time spent: **X** hours spent in total
+Time spent: 12 hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **The list displays a list of data fetched using an API call**
-- [ ] **Data uses the useEffect React hook and async/await syntax**
-- [ ] **The app dashboard includes at least three summary statistics about the data such as**
-  - [ ] *insert details*
-- [ ] **A search bar allows the user to search for an item in the fetched data**
-- [ ] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+- [x] **The list displays a list of data fetched using an API call**
+- [x] **Data uses the useEffect React hook and async/await syntax**
+- [x] **The app dashboard includes at least three summary statistics about the data such as**
+  - [x] Top country/Average ELO/Player with most wins/ Player with most losses
+- [x] **A search bar allows the user to search for an item in the fetched data**
+- [x] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
 
 The following **optional** features are implemented:
 
-- [ ] Multiple filters can be applied simultaneously
-- [ ] Filters use different input types such as a text input, a selection, or a slider
-- [ ] The user can enter specific bounds for filter values
+- [x] Multiple filters can be applied simultaneously
+- [x] Filters use different input types such as a text input, a selection, or a slider
+- [x] The user can enter specific bounds for filter values
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [x] Pagination
 
 ## Video Walkthrough
 
