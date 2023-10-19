@@ -1,9 +1,10 @@
-# Web Development Project 5 - Chess.com Blitz Data Dashbaord
+# Web Development Project 5 - *Chess.com Blitz Data Dashbaord*
 
-Submitted by: Tu Dinh
-This web app: Displays the top 50 blitz player on Chess.com. Blitz is a chess game with a time control of 5 minutes or less with no time increment. Additional information are displayed via the side cards. Filters included are a search bar and drop downs.
+Submitted by: **Tu Dinh*
 
-Time spent: 12 hours spent in total
+This web app: **Displays the top 50 blitz player on Chess.com. Blitz is a chess game with a time control of 5 minutes or less with no time increment. Additional statistics are displayed on the side.**
+
+Time spent: **12** hours spent in total
 
 ## Required Features
 
