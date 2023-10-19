@@ -1,9 +1,10 @@
-# Web Development Project 5 - Chess.com Blitz Data Dashbaord
+# Web Development Project 5 - *Chess.com Blitz Data Dashbaord*
 
-Submitted by: Tu Dinh
-This web app: Displays the top 50 blitz player on Chess.com. Blitz is a chess game with a time control of 5 minutes or less with no time increment. Additional information are displayed via the side cards. Filters included are a search bar and drop downs.
+Submitted by: **Tu Dinh**
 
-Time spent: 12 hours spent in total
+This web app: **Displays the top 50 blitz player on Chess.com. Blitz is a popular chess game mode with a time control of 5 minutes or less with litt;e/no time increment. Additional statistics are displayed on the side.**
+
+Time spent: **12** hours spent in total
 
 ## Required Features
 
@@ -30,10 +31,13 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+  <a href="https://www.loom.com/share/bd6c28ab1a1646a6b184c90b9d776b23">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/bd6c28ab1a1646a6b184c90b9d776b23-with-play.gif">
+  </a>
+
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+Video created with Loom
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -42,6 +46,8 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+This filtering part was the most difficult, especially with pagination. Getting the filters to work with the data on a certain page added more hours to this project than expected. 
 
 ## License
 
