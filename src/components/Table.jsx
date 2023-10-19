@@ -133,7 +133,7 @@ const Table = ({ blitzData }) => {
           </table>
         </div>
 
-        <div className="row paginationRow">
+        <div className="row paginationRow mt-2">
           {/* Pagination */}
           <div className="pagination">
             <button
