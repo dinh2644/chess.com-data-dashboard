@@ -74,44 +74,42 @@ const SidePanel = ({ blitzData }) => {
 
   return (
     <>
-      <div className="sidePanels ">
-        <div className="card">
-          <div className="commonCountry-panel">
-            <div className="card-header">Most common country 🗺️</div>
-            <div className="card-body">{commonCountry}</div>
+      <div className="card">
+        <div className="commonCountry-panel">
+          <div className="card-header">Top country 🗺️</div>
+          <div className="card-body">{commonCountry}</div>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="avgElo-panel">
+          <div className="card-header">Average ELO 🏆</div>
+          <div className="card-body">{String(avgElo)}</div>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="mostWins-panel">
+          <div className="card-header">Most wins 🔥</div>
+          <div className="card-body">
+            {String(mostWins.win_count)} <br />
+            by{" "}
+            <a className="playerLink" href={mostWins.account}>
+              {mostWins.player}
+            </a>
           </div>
         </div>
+      </div>
 
-        <div className="card">
-          <div className="avgElo-panel">
-            <div className="card-header">Average ELO 🏆</div>
-            <div className="card-body">{String(avgElo)}</div>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="mostWins-panel">
-            <div className="card-header">Most wins 🔥</div>
-            <div className="card-body">
-              {String(mostWins.win_count)} <br />
-              by{" "}
-              <a className="playerLink" href={mostWins.account}>
-                {mostWins.player}
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="mostLosses-panel">
-            <div className="card-header">Most losses 🗑️</div>
-            <div className="card-body">
-              {String(mostLosses.loss_count)} <br />
-              by{" "}
-              <a className="playerLink" href={mostLosses.account}>
-                {mostLosses.player}
-              </a>
-            </div>
+      <div className="card">
+        <div className="mostLosses-panel">
+          <div className="card-header">Most losses 🗑️</div>
+          <div className="card-body">
+            {String(mostLosses.loss_count)} <br />
+            by{" "}
+            <a className="playerLink" href={mostLosses.account}>
+              {mostLosses.player}
+            </a>
           </div>
         </div>
       </div>

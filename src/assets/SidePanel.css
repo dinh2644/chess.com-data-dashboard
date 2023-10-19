@@ -2,7 +2,7 @@
   position: fixed;
   top: 50px;
   left: 25px;
-  width: 256px;
+  width: 220px;
   height: 17%;
   background-color: white;
   color: #333;
@@ -15,9 +15,9 @@
 
 .avgElo-panel {
   position: fixed;
-  top: 250px;
+  top: 240px;
   left: 25px;
-  width: 256px;
+  width: 220px;
   height: 17%;
   background-color: white;
   color: #333;
@@ -29,9 +29,9 @@
 }
 .mostWins-panel {
   position: fixed;
-  top: 475px;
+  top: 430px;
   left: 25px;
-  width: 256px;
+  width: 220px;
   height: 17%;
   background-color: white;
   color: #333;
@@ -43,9 +43,9 @@
 }
 .mostLosses-panel {
   position: fixed;
-  top: 700px;
+  top: 620px;
   left: 25px;
-  width: 256px;
+  width: 220px;
   height: 17%;
   background-color: white;
   color: #333;

@@ -1,3 +1,7 @@
+.table {
+  margin: 0 auto !important;
+}
+
 .table thead tr th {
   background: #fff;
   border: 2px solid black;
