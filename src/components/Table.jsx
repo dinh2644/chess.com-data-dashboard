@@ -24,6 +24,7 @@ const Table = ({ blitzData }) => {
         (data.name && data.name.toLowerCase().includes(search.toLowerCase()))
       );
     })
+    //Filter sliced data by win count
     .filter((data) => {
       if (selectedWinsRange) {
         const [min, max] = selectedWinsRange.split("-");
@@ -37,6 +38,7 @@ const Table = ({ blitzData }) => {
       }
       return true;
     })
+    //Filter sliced data by loss count
     .filter((data) => {
       if (selectedLossesRange) {
         const [min, max] = selectedLossesRange.split("-");
