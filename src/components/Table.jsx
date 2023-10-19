@@ -11,16 +11,20 @@ const Table = ({ blitzData }) => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-  const filteredData = blitzData
+  const totalPages = Math.ceil(blitzData.length / itemsPerPage);
+
+  // Slice the data for the current page
+  const slicedData = blitzData.slice(startIndex, endIndex);
+
+  // Filter the sliced data by search input
+  const filteredData = slicedData
     .filter((data) => {
-      // Filter by search input
       return (
         search.toLowerCase() === "" ||
         (data.name && data.name.toLowerCase().includes(search.toLowerCase()))
       );
     })
     .filter((data) => {
-      // Filter by wins range
       if (selectedWinsRange) {
         const [min, max] = selectedWinsRange.split("-");
         const winCount = data.win_count;
@@ -34,7 +38,6 @@ const Table = ({ blitzData }) => {
       return true;
     })
     .filter((data) => {
-      // Filter by losses range
       if (selectedLossesRange) {
         const [min, max] = selectedLossesRange.split("-");
         const lossCount = data.loss_count;
@@ -47,8 +50,6 @@ const Table = ({ blitzData }) => {
       return true;
     });
 
-  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
-
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
@@ -59,7 +60,7 @@ const Table = ({ blitzData }) => {
         <div className="row filterInput mb-2">
           <div className="col-xl-8">
             {/* Searchbar */}
-            <div className="form searchBar ">
+            <div className="form searchBar">
               <i className="fa fa-search"></i>
               <input
                 type="text"
@@ -113,7 +114,7 @@ const Table = ({ blitzData }) => {
               </tr>
             </thead>
             <tbody>
-              {filteredData.slice(startIndex, endIndex).map((data, index) => (
+              {filteredData.map((data, index) => (
                 <tr key={index}>
                   <td className="rankCSS">{data.rank}</td>
                   <td className="nameCol">
@@ -132,7 +133,6 @@ const Table = ({ blitzData }) => {
             </tbody>
           </table>
         </div>
-
         <div className="row paginationRow mt-2">
           {/* Pagination */}
           <div className="pagination">
