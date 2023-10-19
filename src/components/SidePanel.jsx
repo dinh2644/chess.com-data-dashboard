@@ -74,21 +74,21 @@ const SidePanel = ({ blitzData }) => {
 
   return (
     <>
-      <div className="card">
+      <div className="card mb-3">
         <div className="commonCountry-panel">
           <div className="card-header">Top country 🗺️</div>
           <div className="card-body">{commonCountry}</div>
         </div>
       </div>
 
-      <div className="card">
+      <div className="card mb-3">
         <div className="avgElo-panel">
           <div className="card-header">Average ELO 🏆</div>
           <div className="card-body">{String(avgElo)}</div>
         </div>
       </div>
 
-      <div className="card">
+      <div className="card mb-3">
         <div className="mostWins-panel">
           <div className="card-header">Most wins 🔥</div>
           <div className="card-body">
@@ -101,7 +101,7 @@ const SidePanel = ({ blitzData }) => {
         </div>
       </div>
 
-      <div className="card">
+      <div className="card mb-3">
         <div className="mostLosses-panel">
           <div className="card-header">Most losses 🗑️</div>
           <div className="card-body">

@@ -8,14 +8,15 @@
 }
 
 .tableContainer {
-  width: 1200px;
   text-align: center;
+  width: 1200px;
+  margin-left: 110px;
 }
 
 .nameCol {
   text-align: left;
   width: 28%;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .table tbody tr {
@@ -29,6 +30,7 @@
   color: white;
   background: rgb(0, 0, 0, 0.8);
   border: 1px solid black;
+  vertical-align: middle;
 }
 
 .table tbody tr td .chessURL {

@@ -25,8 +25,13 @@ const App = () => {
   return (
     <>
       <Header />
-      <Table blitzData={blitzData} />
-      <SidePanel blitzData={blitzData} />
+      <div className="d-flex">
+        <div className="d-flex flex-column align-items-center cardContainer">
+          <SidePanel blitzData={blitzData} />
+        </div>
+
+        <Table blitzData={blitzData} />
+      </div>
     </>
   );
 };
