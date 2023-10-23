@@ -1,0 +1,18 @@
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1500px;
+  }
+}
+.cardContainer {
+  padding-right: 50px;
+}
+
+.custom-left-align {
+  margin-left: -110px;
+}
+
+.chartContainer {
+  margin-right: -245px;
+  margin-top: 0px;
+  padding-left: 50px;
+}

@@ -1,8 +1,11 @@
+.navbar {
+  margin-top: -25px;
+}
+
 .LiveBlitzRatingCSS {
   color: white;
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-family: "Impact", sans-serif;
-  margin-top: -10px;
 }
 
 .BlitzCSS {
@@ -39,8 +42,8 @@
   font-size: 1rem;
   display: flex;
   justify-content: center;
-  margin-top: -25px;
-  margin-bottom: 5px;
+  margin-top: -40px;
+  margin-bottom: 25px;
   color: whitesmoke;
 }
 

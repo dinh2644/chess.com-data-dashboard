@@ -5,14 +5,12 @@
 html body {
   color: white;
   background-image: url("./assets/chesscom.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100v;
 }
 
 body .navbar .container {
   display: flex;
   justify-content: center;
-}
-
-.cardContainer {
-  margin-left: 25px;
 }

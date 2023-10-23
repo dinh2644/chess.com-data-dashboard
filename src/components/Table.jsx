@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../assets/Table.css";
+import { Link } from "react-router-dom";
 
 const Table = ({ blitzData }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -120,10 +121,10 @@ const Table = ({ blitzData }) => {
                 <tr key={index}>
                   <td className="rankCSS">{data.rank}</td>
                   <td className="nameCol">
-                    <a className="chessURL" href={data.url}>
+                    <Link className="chessURL" to={`/${data.username}`}>
                       <img className="avatar" src={data.avatar} alt="" />
-                      {data.name}
-                    </a>
+                      {data.name} 🔗
+                    </Link>
                   </td>
                   <td>{data.country.slice(-2)}</td>
                   <td>{data.title}</td>

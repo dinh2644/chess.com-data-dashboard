@@ -5,7 +5,7 @@ import "../assets/Header.css";
 const Header = () => {
   return (
     <>
-      <nav className="navbar mb-3">
+      <nav className="navbar mb-4">
         <div className="container mt-2">
           <img className="ChessImg" src={ChessImg} alt="" />
           <h1 className="LiveBlitzRatingCSS">
