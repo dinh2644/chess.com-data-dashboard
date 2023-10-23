@@ -4,7 +4,6 @@ import SidePanel from "../components/SidePanel";
 import Header from "../components/Header";
 import "../assets/MainPage.css";
 import Chart from "../components/Chart";
-import { Outlet, Route, Link } from "react-router-dom"; // Import Route and Link
 
 const MainPage = ({ blitzData }) => {
   return (

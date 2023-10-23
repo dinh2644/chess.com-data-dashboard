@@ -1,35 +1,44 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import "../assets/Details.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Details = () => {
+const Details = ({ blitzData }) => {
   const params = useParams();
   const [profileData, setProfileData] = useState([]);
+  //const [playerNotInTop50, setPlayerNotInTop50] = useState(false);
+
+  const topPlayerUsernames = blitzData.map((player) => player.username);
 
   useEffect(() => {
-    const fetchProfileData = async () => {
-      try {
-        let response = await axios.get(
-          `https://api.chess.com/pub/player/${params.username}`
-        );
-        let countryLink = response.data.country;
-        let countryCode = countryLink.split("/").pop();
-        let countryResponse = await axios.get(
-          `https://api.chess.com/pub/country/${countryCode}`
-        );
-        let countryData = countryResponse.data;
-        const playerData = {
-          ...response.data,
-          country: countryData.name,
-        };
-        setProfileData(playerData);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchProfileData();
-  }, []);
+    if (topPlayerUsernames.includes(params.username)) {
+      const fetchProfileData = async () => {
+        try {
+          let response = await axios.get(
+            `https://api.chess.com/pub/player/${params.username}`
+          );
+
+          let countryLink = response.data.country;
+          let countryCode = countryLink.split("/").pop();
+          let countryResponse = await axios.get(
+            `https://api.chess.com/pub/country/${countryCode}`
+          );
+          let countryData = countryResponse.data;
+          const playerData = {
+            ...response.data,
+            country: countryData.name,
+          };
+
+          setProfileData(playerData);
+        } catch (error) {
+          console.error(error);
+          setPlayerNotInTop50(!playerNotInTop50);
+        }
+      };
+      fetchProfileData();
+    } else {
+    }
+  }, [params.username, topPlayerUsernames]);
 
   const convertUnixTimestampToDateString = (unixTimestamp) => {
     const date = new Date(unixTimestamp * 1000);
@@ -46,8 +55,8 @@ const Details = () => {
                 <div className="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
                   <div className="row align-items-center">
                     <div className="col-lg-6 mb-4 mb-lg-0 d-flex justify-content-center">
-                      <div class="box">
-                        <div class="box-inner">
+                      <div className="box">
+                        <div className="box-inner">
                           <img src={profileData.avatar} alt="..." />
                         </div>
                       </div>

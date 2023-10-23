@@ -35,7 +35,10 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<MainPage blitzData={blitzData} />} />
-          <Route path="/:username" element={<Details />} />
+          <Route
+            path="/:username"
+            element={<Details blitzData={blitzData} />}
+          />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
