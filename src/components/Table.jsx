@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../assets/Table.css";
 import { Link } from "react-router-dom";
 
 const Table = ({ blitzData }) => {
+  const searchInputRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [search, setSearch] = useState("");
   const [selectedWinsRange, setSelectedWinsRange] = useState("");
   const [selectedLossesRange, setSelectedLossesRange] = useState("");
+
+  useEffect(() => {
+    if (searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  }, []);
 
   const itemsPerPage = 10;
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -66,6 +73,7 @@ const Table = ({ blitzData }) => {
             <div className="form searchBar">
               <i className="fa fa-search"></i>
               <input
+                ref={searchInputRef}
                 type="text"
                 className="form-control form-input"
                 placeholder="Search players..."

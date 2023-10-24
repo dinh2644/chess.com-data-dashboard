@@ -1,6 +1,7 @@
 import React from "react";
 import ChessImg from "../assets/chess.png";
 import "../assets/Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -17,6 +18,24 @@ const Header = () => {
         Top 50 best&nbsp; <a href="https://www.chess.com/home">Chess.com</a>{" "}
         &nbsp;blitz player in the world 😮
       </span>
+
+      <div className="col d-flex justify-content-center homeSearchCSS">
+        <Link className="HomeSearch" to="/">
+          Home 🏠
+        </Link>{" "}
+        &nbsp;|&nbsp;{" "}
+        <Link
+          className="HomeSearch"
+          to="/"
+          onClick={() => {
+            if (searchInputRef.current) {
+              searchInputRef.current.focus();
+            }
+          }}
+        >
+          Search 🔎
+        </Link>
+      </div>
     </>
   );
 };

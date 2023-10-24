@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import MainPage from "./pages/MainPage";
 import PageNotFound from "./components/PageNotFound";
 import Details from "./components/Details";
+import Header from "./components/Header";
 import {
   BrowserRouter as Router,
   Route,
@@ -34,11 +35,18 @@ const App = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<MainPage blitzData={blitzData} />} />
           <Route
-            path="/:username"
-            element={<Details blitzData={blitzData} />}
-          />
+            path="/"
+            element={
+              <>
+                <Header />
+                <Outlet />
+              </>
+            }
+          >
+            <Route index={true} element={<MainPage blitzData={blitzData} />} />
+            <Route path="/:username" element={<Details />} />
+          </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>

@@ -1,14 +1,12 @@
 import React from "react";
 import Table from "../components/Table";
 import SidePanel from "../components/SidePanel";
-import Header from "../components/Header";
 import "../assets/MainPage.css";
 import Chart from "../components/Chart";
 
 const MainPage = ({ blitzData }) => {
   return (
     <>
-      <Header />
       <div className="container">
         <div className="row tableRow">
           <div className="col d-flex custom-left-align">
