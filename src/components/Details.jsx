@@ -1,39 +1,45 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "../assets/Details.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Details = () => {
+const Details = ({ blitzData }) => {
   const params = useParams();
+  const navigate = useNavigate();
   const [profileData, setProfileData] = useState([]);
-  //const [playerNotInTop50, setPlayerNotInTop50] = useState(false);
-
-  //const topPlayerUsernames = blitzData.map((player) => player.username);
+  const top50PlayerUsernames = blitzData.map((player) => player.username);
 
   useEffect(() => {
-    const fetchProfileData = async () => {
-      try {
-        let response = await axios.get(
-          `https://api.chess.com/pub/player/${params.username}`
-        );
+    if (top50PlayerUsernames.length > 0) {
+      if (!top50PlayerUsernames.includes(params.username)) {
+        navigate("/404");
+      } else {
+        const fetchProfileData = async () => {
+          try {
+            let response = await axios.get(
+              "https://api.chess.com/pub/player/" + params.username
+            );
 
-        let countryLink = response.data.country;
-        let countryCode = countryLink.split("/").pop();
-        let countryResponse = await axios.get(
-          `https://api.chess.com/pub/country/${countryCode}`
-        );
-        let countryData = countryResponse.data;
-        const playerData = {
-          ...response.data,
-          country: countryData.name,
+            let countryLink = response.data.country;
+            let countryCode = countryLink.split("/").pop();
+            let countryResponse = await axios.get(
+              `https://api.chess.com/pub/country/${countryCode}`
+            );
+            let countryData = countryResponse.data;
+            const playerData = {
+              ...response.data,
+              country: countryData.name,
+            };
+
+            setProfileData(playerData);
+          } catch (error) {
+            console.error(error);
+          }
         };
-        setProfileData(playerData);
-      } catch (error) {
-        console.error(error);
+        fetchProfileData();
       }
-    };
-    fetchProfileData();
-  }, [params.username]);
+    }
+  }, [params.username, top50PlayerUsernames]);
 
   const convertUnixTimestampToDateString = (unixTimestamp) => {
     const date = new Date(unixTimestamp * 1000);

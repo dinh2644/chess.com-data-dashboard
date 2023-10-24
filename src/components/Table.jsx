@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "../assets/Table.css";
 import { Link } from "react-router-dom";
 
-const Table = ({ blitzData }) => {
+const Table = ({ blitzData, handleDetailsPage }) => {
   const searchInputRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [search, setSearch] = useState("");

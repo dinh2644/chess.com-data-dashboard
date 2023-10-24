@@ -45,8 +45,12 @@ const App = () => {
             }
           >
             <Route index={true} element={<MainPage blitzData={blitzData} />} />
-            <Route path="/:username" element={<Details />} />
+            <Route
+              path="/:username"
+              element={<Details blitzData={blitzData} />}
+            />
           </Route>
+          <Route path="/404" element={<PageNotFound />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
