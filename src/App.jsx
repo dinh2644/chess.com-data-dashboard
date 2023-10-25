@@ -24,12 +24,12 @@ const App = () => {
         const LeaderboardData = response.data;
         const live_blitzData = LeaderboardData.live_blitz;
         setBlitzData(live_blitzData);
-        //console.log(blitzData);
       } catch (err) {
         console.error("Error fetching: ", err);
       }
     };
     fetchLeaderboard();
+    console.log(blitzData);
   }, []);
   return (
     <>

@@ -136,3 +136,16 @@ input {
   caret-color: red;
   font-size: 15px;
 }
+
+.eloIncrease {
+  width: 10px;
+}
+
+.eloDecrease {
+  width: 10px;
+}
+
+.custom-tooltip {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ceaa4d;
+}

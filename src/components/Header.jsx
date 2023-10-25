@@ -19,7 +19,7 @@ const Header = () => {
         &nbsp;blitz player in the world 😮
       </span>
 
-      <div className="col d-flex justify-content-center homeSearchCSS">
+      <span className="col d-flex justify-content-center homeSearchCSS">
         <Link className="HomeSearch" to="/">
           Home 🏠
         </Link>{" "}
@@ -35,7 +35,7 @@ const Header = () => {
         >
           Search 🔎
         </Link>
-      </div>
+      </span>
     </>
   );
 };

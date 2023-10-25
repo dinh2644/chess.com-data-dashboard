@@ -42,7 +42,7 @@
   font-size: 1rem;
   display: flex;
   justify-content: center;
-  margin-top: -40px;
+  margin-top: -30px;
   margin-bottom: 25px;
   color: whitesmoke;
 }
@@ -55,6 +55,7 @@
 .HomeSearch {
   text-decoration: none;
   color: white;
+  top: 10px !important;
 }
 
 .homeSearchCSS {

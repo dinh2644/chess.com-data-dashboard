@@ -1,8 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../assets/Table.css";
 import { Link } from "react-router-dom";
+import UpArrow from "../assets/uparrow.png";
+import DownArrow from "../assets/downarrow.png";
+import BarChartComponent from "../components/BarChartComponent";
 
-const Table = ({ blitzData, handleDetailsPage }) => {
+const Table = ({ blitzData }) => {
   const searchInputRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [search, setSearch] = useState("");
@@ -122,6 +125,7 @@ const Table = ({ blitzData, handleDetailsPage }) => {
                 <th>Win Count</th>
                 <th>Loss Count</th>
                 <th>Elo</th>
+                <th>(+/-)</th>
               </tr>
             </thead>
             <tbody>
@@ -139,6 +143,30 @@ const Table = ({ blitzData, handleDetailsPage }) => {
                   <td>{String(data.win_count)}</td>
                   <td>{String(data.loss_count)}</td>
                   <td>{String(data.score)}</td>
+                  <td>
+                    {data.trend_score &&
+                    typeof data.trend_score.direction !== "undefined" ? (
+                      data.trend_score.direction === 1 ? (
+                        <span>
+                          <span role="img" aria-label="Elo Increase">
+                            <img className="eloIncrease" src={UpArrow} alt="" />
+                          </span>
+                          {data.trend_score.delta}
+                        </span>
+                      ) : data.trend_score.direction === -1 ? (
+                        <span>
+                          <span role="img" aria-label="Elo Decrease">
+                            <img
+                              className="eloDecrease"
+                              src={DownArrow}
+                              alt=""
+                            />
+                          </span>
+                          {data.trend_score.delta}
+                        </span>
+                      ) : null
+                    ) : null}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -165,6 +193,11 @@ const Table = ({ blitzData, handleDetailsPage }) => {
               Next
             </button>
           </div>
+        </div>
+        <div className="mt-5">
+          {filteredData.length > 1 && (
+            <BarChartComponent playerData={filteredData} />
+          )}
         </div>
       </div>
     </>
