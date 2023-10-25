@@ -2,7 +2,7 @@
 
 Submitted by: **Tu Dinh**
 
-This web app: **Displays the top 50 blitz player on Chess.com. Blitz is a popular chess game mode with a time control of 5 minutes or less with little/no time increment.**
+This web app: **Displays the top 50 blitz player on Chess.com based on current ELO rating. Blitz is a popular chess game mode with a time control of 5 minutes or less with little/no time increment.**
 
 Time spent: **7** hours spent in total
 
