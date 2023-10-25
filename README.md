@@ -1,43 +1,40 @@
-# Web Development Project 5 - *Chess.com Blitz Data Dashbaord*
+# Web Development Project 6 - *Chess.com Blitz Data Dashboard*
 
 Submitted by: **Tu Dinh**
 
-This web app: **Displays the top 50 blitz player on Chess.com. Blitz is a popular chess game mode with a time control of 5 minutes or less with little/no time increment. Additional statistics are displayed on the side.**
+This web app: **Displays the top 50 blitz player on Chess.com based on current ELO rating. Blitz is a popular chess game mode with a time control of 5 minutes or less with little/no time increment.**
 
-Time spent: **12** hours spent in total
+Time spent: **7** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The list displays a list of data fetched using an API call**
-- [x] **Data uses the useEffect React hook and async/await syntax**
-- [x] **The app dashboard includes at least three summary statistics about the data such as**
-  - [x] Top country/Average ELO/Player with most wins/ Player with most losses
-- [x] **A search bar allows the user to search for an item in the fetched data**
-- [x] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+- [x] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [x] **Clicking on an item in the list view displays more details about it**
+- [x] **Clicking on an item has a direct, unique link to that item's detail view page**
+
 
 The following **optional** features are implemented:
 
-- [x] Multiple filters can be applied simultaneously
-- [x] Filters use different input types such as a text input, a selection, or a slider
-- [x] The user can enter specific bounds for filter values
+- [x] The site's customized dashboard contains more content that explains what is interesting about the data
+- [x] The site allows users to toggle between different data visualizations
 
 The following **additional** features are implemented:
 
-* [x] Pagination
+* [x] Navbar links
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-  <a href="https://www.loom.com/share/bd6c28ab1a1646a6b184c90b9d776b23">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/bd6c28ab1a1646a6b184c90b9d776b23-with-play.gif">
+  <a href="https://www.loom.com/share/e294ebb8000d4ccd8978aa7da3e7d7ac">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/e294ebb8000d4ccd8978aa7da3e7d7ac-with-play.gif">
   </a>
 
 
 <!-- Replace this with whatever GIF tool you used! -->
-Video created with Loom
+GIF created with Loom  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -46,8 +43,7 @@ Video created with Loom
 ## Notes
 
 Describe any challenges encountered while building the app.
-
-This filtering part was the most difficult, especially with pagination. Getting the filters to work with the data on a certain page added more hours to this project than expected. 
+The charts were the most difficult part when trying to work with a new 3rd party library when trying to get specific data.
 
 ## License
 
