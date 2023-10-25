@@ -2,54 +2,45 @@
   background: #fff;
   border: 2px solid black;
 }
-
 .tableContainer {
   text-align: center;
 }
-
 .nameCol {
   text-align: left;
   width: 28%;
   font-size: 1rem;
 }
-
 .table tbody tr {
   color: #333;
   background: #f2f2f2;
   border: 2px solid black;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
 .table tbody tr td {
   color: white;
   background: rgb(0, 0, 0, 0.8);
   border: 1px solid black;
   vertical-align: middle;
 }
-
 .table tbody tr td .chessURL {
   color: white;
 }
 .table tbody tr td .avatar {
   width: 3rem;
 }
-
 .chessURL {
   color: white;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s !important;
 }
-
 .chessURL:hover {
   text-decoration: underline;
 }
-
 .paginationRow {
   position: relative;
   min-height: 50px;
 }
-
 .pagination {
   display: flex;
   justify-content: center;
@@ -59,7 +50,6 @@
   left: 50%;
   transform: translateX(-50%);
 }
-
 .pagination button {
   color: black;
   background: white;
@@ -68,12 +58,10 @@
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
-
 .pagination button:hover {
   background: red;
   color: white;
 }
-
 .searchBar {
   width: 50%;
   padding: 0;
@@ -81,7 +69,6 @@
   border: none;
   margin-left: -11px;
 }
-
 .searchBar .form-input {
   border: none;
   background: white;
@@ -94,7 +81,6 @@
 .searchBar .form-input::placeholder {
   color: black;
 }
-
 .form-select {
   width: 55%;
   border: none;
@@ -104,20 +90,16 @@
   position: relative;
   border-radius: 0;
 }
-
 .filterDropdowns {
   display: flex;
 }
-
 .lossDropDown {
   left: 11px;
 }
-
 .rankCSS {
   vertical-align: middle;
   width: 50px;
 }
-
 .playerLink {
   color: #007bff;
   text-decoration: none;
@@ -126,25 +108,20 @@
 .playerLink:hover {
   text-decoration: underline;
 }
-
 .avatar {
   margin-right: 5px;
   width: 2.3rem !important;
 }
-
 input {
   caret-color: red;
   font-size: 15px;
 }
-
 .eloIncrease {
   width: 10px;
 }
-
 .eloDecrease {
   width: 10px;
 }
-
 .custom-tooltip {
   background-color: rgba(0, 0, 0, 0.8);
   color: #ceaa4d;

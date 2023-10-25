@@ -31,7 +31,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 const PlayerWinChart = ({ playerData }) => {
   return (
     <>
-      <h4>Win Leaderboard</h4>
+      <h4 id="barchart">Win Leaderboard</h4>
       <ResponsiveContainer width="100%" height={600}>
         <BarChart data={playerData}>
           <XAxis dataKey="rank" />

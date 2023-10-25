@@ -1,24 +1,20 @@
 .navbar {
   margin-top: -25px;
 }
-
 .LiveBlitzRatingCSS {
   color: white;
   font-size: 4rem;
   font-family: "Impact", sans-serif;
 }
-
 .BlitzCSS {
   color: red;
   font-family: "Impact", sans-serif;
 }
-
 .ChessImg {
   width: 5rem;
   float: left;
   margin-right: 25px;
 }
-
 @keyframes glow {
   0% {
     opacity: 1;
@@ -30,14 +26,12 @@
     opacity: 1;
   }
 }
-
 .LiveBlitzRatingCSS::after {
   content: "🔴";
   display: inline-block;
   animation: glow 1s infinite;
   color: #ff0000;
 }
-
 .chessDOTcom {
   font-size: 1rem;
   display: flex;
@@ -46,19 +40,17 @@
   margin-bottom: 25px;
   color: whitesmoke;
 }
-
 .chessDOTcom a {
   text-decoration: none;
   color: palevioletred;
 }
-
 .HomeSearch {
   text-decoration: none;
   color: white;
   top: 10px !important;
 }
-
 .homeSearchCSS {
   margin-top: -15px;
   font-size: 1.5rem;
+  font-size: 20px;
 }

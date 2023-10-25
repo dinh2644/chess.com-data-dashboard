@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
-import "../assets/Chart.css";
+import "../assets/PieChart.css";
 
-const Chart = ({ blitzData }) => {
+const PieChartComponent = ({ blitzData }) => {
   const [countryData, setCountryData] = useState([]);
 
   useEffect(() => {
@@ -104,4 +104,4 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
-export default Chart;
+export default PieChartComponent;

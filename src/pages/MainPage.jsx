@@ -2,7 +2,7 @@ import React from "react";
 import Table from "../components/Table";
 import SidePanel from "../components/SidePanel";
 import "../assets/MainPage.css";
-import Chart from "../components/Chart";
+import PieChartComponent from "../components/PieChartComponent";
 
 const MainPage = ({ blitzData }) => {
   return (
@@ -15,7 +15,7 @@ const MainPage = ({ blitzData }) => {
             </div>
             <Table blitzData={blitzData} />
             <div className="chartContainer">
-              <Chart blitzData={blitzData} />
+              <PieChartComponent blitzData={blitzData} />
             </div>
           </div>
         </div>

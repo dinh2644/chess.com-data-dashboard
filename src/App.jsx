@@ -29,7 +29,6 @@ const App = () => {
       }
     };
     fetchLeaderboard();
-    console.log(blitzData);
   }, []);
   return (
     <>

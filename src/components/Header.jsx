@@ -35,6 +35,10 @@ const Header = () => {
         >
           Search 🔎
         </Link>
+        &nbsp;|&nbsp;{" "}
+        <a className="HomeSearch" href="#barchart">
+          BarChart 📊
+        </a>
       </span>
     </>
   );
