@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 import UpArrow from "../assets/uparrow.png";
 import DownArrow from "../assets/downarrow.png";
 import BarChartComponent from "../components/BarChartComponent";
+import Brilliant from "../assets/brilliant.png";
+import Blunder from "../assets/blunder.png";
+import Good from "../assets/good.png";
+import Excellent from "../assets/excellent.png";
+import Mistake from "../assets/mistake.png";
+import Best from "../assets/best.png";
 
 const Table = ({ blitzData }) => {
   const searchInputRef = useRef(null);
@@ -67,6 +73,44 @@ const Table = ({ blitzData }) => {
     setCurrentPage(newPage);
   };
 
+  const getRatioColorClass = (ratio) => {
+    const ratioValue = parseFloat(ratio);
+    if (ratioValue < 1) {
+      return "blunder";
+    } else if (ratioValue >= 1 && ratioValue < 2) {
+      return "mistake";
+    } else if (ratioValue >= 2 && ratioValue < 3) {
+      return "good";
+    } else if (ratioValue >= 3 && ratioValue < 4) {
+      return "excellent";
+    } else if (ratioValue >= 4 && ratioValue < 5) {
+      return "best";
+    } else if (ratioValue >= 5) {
+      return "brilliant";
+    }
+
+    return "";
+  };
+
+  const handleTitle = (ratio) => {
+    const ratioValue = parseFloat(ratio);
+    if (ratioValue < 1) {
+      return "Bruh";
+    } else if (ratioValue >= 1 && ratioValue < 2) {
+      return "Can do better";
+    } else if (ratioValue >= 2 && ratioValue < 3) {
+      return "Solid";
+    } else if (ratioValue >= 3 && ratioValue < 4) {
+      return "Wow!";
+    } else if (ratioValue >= 4 && ratioValue < 5) {
+      return "Amazing!";
+    } else if (ratioValue >= 5) {
+      return "Brilliant!";
+    }
+
+    return "";
+  };
+
   return (
     <>
       <div className="container tableContainer">
@@ -125,7 +169,7 @@ const Table = ({ blitzData }) => {
                 <th>Win Count</th>
                 <th>Loss Count</th>
                 <th>Elo</th>
-                <th>(+/-)</th>
+                <th>W/L ratio</th>
               </tr>
             </thead>
             <tbody>
@@ -143,28 +187,39 @@ const Table = ({ blitzData }) => {
                   <td>{String(data.win_count)}</td>
                   <td>{String(data.loss_count)}</td>
                   <td>{String(data.score)}</td>
-                  <td>
-                    {data.trend_score &&
-                    typeof data.trend_score.direction !== "undefined" ? (
-                      data.trend_score.direction === 1 ? (
-                        <span>
-                          <span role="img" aria-label="Elo Increase">
-                            <img className="eloIncrease" src={UpArrow} alt="" />
-                          </span>
-                          {data.trend_score.delta}
-                        </span>
-                      ) : data.trend_score.direction === -1 ? (
-                        <span>
-                          <span role="img" aria-label="Elo Decrease">
-                            <img
-                              className="eloDecrease"
-                              src={DownArrow}
-                              alt=""
-                            />
-                          </span>
-                          {data.trend_score.delta}
-                        </span>
-                      ) : null
+                  <td
+                    className={getRatioColorClass(
+                      (data.win_count / data.loss_count).toFixed(2)
+                    )}
+                    title={handleTitle(
+                      (data.win_count / data.loss_count).toFixed(2)
+                    )}
+                  >
+                    {(data.win_count / data.loss_count).toFixed(2)}
+                    {getRatioColorClass(
+                      (data.win_count / data.loss_count).toFixed(2)
+                    ) === "brilliant" ? (
+                      <img className="ratioImg" src={Brilliant} alt="" />
+                    ) : getRatioColorClass(
+                        (data.win_count / data.loss_count).toFixed(2)
+                      ) === "best" ? (
+                      <img className="ratioImg" src={Best} alt="" />
+                    ) : getRatioColorClass(
+                        (data.win_count / data.loss_count).toFixed(2)
+                      ) === "excellent" ? (
+                      <img className="ratioImg" src={Excellent} alt="" />
+                    ) : getRatioColorClass(
+                        (data.win_count / data.loss_count).toFixed(2)
+                      ) === "good" ? (
+                      <img className="ratioImg" src={Good} alt="" />
+                    ) : getRatioColorClass(
+                        (data.win_count / data.loss_count).toFixed(2)
+                      ) === "mistake" ? (
+                      <img className="ratioImg" src={Mistake} alt="" />
+                    ) : getRatioColorClass(
+                        (data.win_count / data.loss_count).toFixed(2)
+                      ) === "blunder" ? (
+                      <img className="ratioImg" src={Blunder} alt="" />
                     ) : null}
                   </td>
                 </tr>

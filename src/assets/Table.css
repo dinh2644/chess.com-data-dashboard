@@ -126,3 +126,28 @@ input {
   background-color: rgba(0, 0, 0, 0.8);
   color: #ceaa4d;
 }
+
+.ratioImg {
+  width: 20px;
+}
+
+.blunder {
+  color: red !important;
+}
+.mistake {
+  color: #e6912c !important;
+}
+.good {
+  color: #96af8b !important;
+}
+.excellent {
+  color: #96bc4b !important;
+}
+.best {
+  color: #95bb4a !important;
+  font-weight: 700;
+}
+.brilliant {
+  color: cyan !important;
+  font-weight: 800;
+}
