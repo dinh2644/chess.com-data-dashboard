@@ -28,8 +28,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-  <a href="https://www.loom.com/share/e294ebb8000d4ccd8978aa7da3e7d7ac">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/e294ebb8000d4ccd8978aa7da3e7d7ac-with-play.gif">
+  <a href="https://www.loom.com/share/becaeb277a3d4071bf405400dc5d6f8b">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/becaeb277a3d4071bf405400dc5d6f8b-with-play.gif">
   </a>
 
 
